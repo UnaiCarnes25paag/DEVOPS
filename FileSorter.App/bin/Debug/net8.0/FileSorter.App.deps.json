@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FileSorter.App/1.0.0": {
+        "dependencies": {
+          "FileSorter.Core": "1.0.0"
+        },
+        "runtime": {
+          "FileSorter.App.dll": {}
+        }
+      },
+      "FileSorter.Core/1.0.0": {
+        "runtime": {
+          "FileSorter.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FileSorter.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FileSorter.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
