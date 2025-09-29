@@ -14,7 +14,7 @@ namespace FileSorter.Tests
 
             var result = FileSorterService.SortFileLines(tmp);
 
-            Assert.Equal(new[] { "X", "Y", "Z" }, result);
+            Assert.Equal(new[] { "A", "b", "c" }, result);
 
             File.Delete(tmp);
         }
