@@ -1,0 +1,11 @@
+FROM alpine:latest
+
+WORKDIR /app
+# Install Python and dependencies via apk
+RUN apk add --no-cache python3 py3-pip py3-flask py3-requests py3-gunicorn
+# Copy the application
+COPY pythonejemplo.py .
+# Expose the port the app will run on
+EXPOSE 5000
+# Command to run the application
+CMD ["python3", "pythonejemplo.py"]
