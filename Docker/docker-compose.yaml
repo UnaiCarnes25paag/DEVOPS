@@ -1,0 +1,28 @@
+version: '3'
+services:
+  bbdd:
+    container_name: mimysql
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=1234
+
+  nextcloud:
+    container_name: nextcloud
+    image: nextcloud
+    restart: always
+    ports:
+      - "8085:80"
+    environment:
+      - MYSQL_HOST=bbdd
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=1234
+    depends_on:
+      - bbdd
